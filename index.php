@@ -16,7 +16,7 @@ include "pages/side_bar.php";
 include "pages/footer.php";
 
 
-//вывод 4-х последних статей без JOIN с реюзом массива категорий из хедера
+//вывод 4-х последних статей без JOIN с реюзом массива категорий из хедера.
 $articles_all_category = mysqli_query($connection, "SELECT * FROM articles ORDER BY id DESC LIMIT 4");
 
 
