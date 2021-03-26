@@ -1,0 +1,5 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule ^(.*)$ http://testt.by/$1 [R=301,L]
+RewriteCond %{SERVER_PORT} 443
+RewriteRule ^(.*)$ http://testt.by/$1 [R=301,L]
