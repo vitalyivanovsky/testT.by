@@ -1,8 +1,5 @@
 $(document).ready(function () {
-		
-//$('#email').addClass('test');
 
-				
 /*
 
 					jQuery('#email').on('blur', function(){						
@@ -19,26 +16,18 @@ $(document).ready(function () {
 						var validEmail	= false;
 						$('#email').attr({'verifedEmail': false});
 						
-						//$('form').on('change', function(){alert('change!');});
-						//jQuery("input").addClass('false');
 
 						$('#email').on('keyup', function(){
 							var email_user = jQuery("input[name='email']").val();
-							//console.log(email_user);
 							verifyEmail(email_user);
 						});
 
 						jQuery("form").submit(function(event){
 							event.preventDefault();
 
-
 						var name  = jQuery("input[name='login']").val();
-						
-						
 						var pass  = jQuery("input[name='password']").val();
-
 						var email  = jQuery('#email').attr('verifedEmail');
-					
 
 						if (name == ""){
 							jQuery('#nameTitle').css({"color": "DarkRed"});
@@ -67,10 +56,9 @@ $(document).ready(function () {
 					;
 						if (validName == true && validPass == true && validEmail == true){
 							
-							setTimeout(sendAjaxForm(), 3);
+							setTimeout(sendAjaxForm(), 1);
 							//jQuery('form').unbind('submit').submit();
 						}
-
 					});
 					};
 
@@ -83,15 +71,10 @@ $(document).ready(function () {
 							data: $('#regForm').serialize(),
 							success: function(response){
 								$('#reg_res').html($.parseJSON(response));
-								//$('#reg_res').css({'color': 'red'});
-								//console.log($.parseJSON(response));
 							}
 						})
 					};
 	
-
-
-
 
 					function verifyEmail(email){
 						jQuery.ajax({
@@ -104,9 +87,6 @@ $(document).ready(function () {
 							}
 						})
 					};
-	
-
-
 
 
 					function returnEmail(email){
@@ -117,9 +97,5 @@ $(document).ready(function () {
 						} else {							
 							jQuery('#emailTitle').css({"color": "DarkRed"});
 						}
-						
 					};
-
-
-
 });

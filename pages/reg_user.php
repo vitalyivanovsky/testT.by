@@ -57,7 +57,13 @@ $errors = array();
             // Проверяем, есть ли ошибки
             if ($result2=='TRUE')
             {
-            echo json_encode("Вы успешно зарегистрированы! Теперь вы можете зайти на сайт.");             
+            $to = $email;
+            $subject = "успешная регистрация на сайте про котиков";
+            $message = "Поздравляем! /n $login, вы успешно.../n можете оставлять коментарии.../n летайте нашими паровозами!";
+            $additional_headers = 'From: testt@post.co' . "\r\n" . 'Reply-To: testt@post.co' . "\r\n" .
+                'X-Mailer: PHP/' . phpversion();
+            mail($to, $subject, $message, $additional_headers);
+            echo json_encode("Вы успешно зарегистрированы! Теперь вы можете зайти на сайт.");
             }
          else {
           echo json_encode('Ошибка! Вы не зарегистрированы.');   

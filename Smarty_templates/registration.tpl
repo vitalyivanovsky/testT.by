@@ -45,7 +45,7 @@
     </p>
 <p>
     <label id="emailTitle">Ваш email:<br></label>
-    <input name="email" id="email" type="text" size="25" maxlength="25">
+    <input name="email" id="email" type="text" size="55" maxlength="55">
     </p>
 <!--**** В поле для паролей (name="password" type="password") пользователь вводит свой пароль ***** --> 
 <p>
